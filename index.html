@@ -32,12 +32,9 @@
         background: var(--white);
     }
 
-    body > header {
-        font-size: min(min(1rem, 3vw), 2vh);
-    }
-
     .fullscreen {
         height: 100dvh;
+        font-size: min(min(1rem, 3vw), 2vh);
         overflow: hidden;
     }
 
@@ -61,27 +58,12 @@
         gap: 2.62em;
     }
 
-    .fullscreen button {
-        display: flex;
-        padding: 1em 1.333em;
-        justify-content: center;
-        align-items: center;
-        gap: 0.889em;
-
-        border-radius: 1em;
-        border: 0.1em solid var(--gray);
-        background: var(--white);
-        color: var(--black);
-
-        font-size: 1.125em;
+    .fullscreen .subtitle {
+        font-size: 200%;
     }
 
     .fullscreen .image {
         height: min(intrinsic, 20vh);
-    }
-
-    .fullscreen img {
-        height: 50%;
     }
 
     .fullscreen svg {
@@ -89,18 +71,47 @@
         width: 100%;
     }
 
-    body > header p {
-        width: 33em;
-        /* FIXME: we should use paper-width, that should be in "REM" */
-        max-width: 100%;
-        margin: 1.125em 0;
-
-        font-size: 2em;
+    .overview {
+        width: 95%;
+        margin-top: calc(-1 * var(--gap-xl) + 2rem);
         text-align: center;
+        gap: var(--gap-m);
     }
 
-    .feedback {
-        text-align: center;
+    .overview header {
+        width: 68rem;
+        max-width: 100%;
+        margin-bottom: 1rem;
+
+        font-size: 2em;
+    }
+
+    .overview section {
+        border: 0.6rem #535557 solid;
+        border-width: 0.1rem 0.6rem;
+        border-radius: 2rem;
+        box-shadow: var(--shadow);
+        background: var(--gray-100);
+        padding: 1rem;
+    }
+
+    .overview dd {
+        margin-bottom: 0.6em;
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+
+    .overview dt {
+        max-width: var(--paper-width);
+        font-size: 1.4em;
+    }
+
+    .overview footer {
+        width: 68rem;
+        max-width: 100%;
+        margin-top: 1rem;
+
+        font-size: 1.8em;
     }
 
     .card > header > img {
@@ -113,63 +124,74 @@
     }
 </style>
 
-<header class="column">
-    <div class="fullscreen column">
-        <div class="logo">penl<strong>o</strong>ck</div>
-        <section class="column title">
-            <h1>State-of-the-art seed phrase backup.</h1>
-            <button disabled>
-                <span>Bali Bitcoin Week Pre-Release</span>
-                <span class="green-dot"></span>
-            </button>
-        </section>
-        <section class="column image">
-            <!-- TODO: move this in its own component -->
-            <svg viewbox="0 0 100 50">
-                <defs>
-                    <pattern
-                        id="image"
-                        patternUnits="userSpaceOnUse"
+<header class="column fullscreen">
+    <div class="logo">penl<strong>o</strong>ck</div>
+    <section class="column title">
+        <h1>Level-Up Your Wallet Backup!</h1>
+        <span class="subtitle">For Good.</span>
+    </section>
+    <section class="column image">
+        <!-- TODO: move this in its own component -->
+        <svg viewbox="0 0 100 50">
+            <defs>
+                <pattern
+                    id="image"
+                    patternUnits="userSpaceOnUse"
+                    height="100"
+                    width="100"
+                >
+                    <image
+                        x="0"
+                        y="0"
+                        xlink:href="../images/background.jpg"
                         height="100"
                         width="100"
-                    >
-                        <image
-                            x="0"
-                            y="0"
-                            xlink:href="../images/background.jpg"
-                            height="100"
-                            width="100"
-                        ></image>
-                    </pattern>
-                </defs>
-                <circle cx="50" cy="50" r="50" fill="url(#image)" />
-            </svg>
-        </section>
-    </div>
-
-    <p>
-        Penlock is an
-        <strong
-            >open-source, cryptographically secure, printable
-            paper-computer.</strong
-        >
-        It guides users through secret-splitting their BIP39 seed phrase without
-        an electronic device.
-    </p>
+                    ></image>
+                </pattern>
+            </defs>
+            <circle cx="50" cy="50" r="50" fill="url(#image)" />
+        </svg>
+    </section>
 </header>
 
-<section class="notes">
-    <section class="card">
-        <img class="circled" src="../icons/lightbulb.svg" />
-        <h2>Hello Everyone!</h2>
-        <p>
-            You are browsing the pre-release of Penlock, specially made
-            available for the Bali Bitcoin Week! At that time, the illustrated
-            examples are being worked on. However, I'll be here in the workshops
-            to teach you how to use it, and receive your precious feedback. Have
-            a good week in Bali!
-        </p>
+<section class="overview">
+    <header>
+        Print & assemble Penlock's cryptographic wheel, then follow the guide to
+        <strong>split your seed phrase into a 2-of-3 backup</strong> that'll
+        provide:
+    </header>
+
+    <section>
+        <dd>Secure Access</dd>
+        <dt>
+            If finding a piece of paper is enough to drain your life's savings,
+            you have a problem. You can fix it now without even having to create
+            a new wallet.
+        </dt>
     </section>
+
+    <section>
+        <dd>Offsite Recovery</dd>
+        <dt>
+            Floods and fires happen. Penlock helps you design a backup strategy
+            to recover your wallet from a different location, should the need
+            arise.
+        </dt>
+    </section>
+
+    <section>
+        <dd>Trust-Minimized Inheritance</dd>
+        <dt>
+            Have your loved ones retrieve your funds, but only after you're
+            gone. No one else will ever be able to access or peek at them.
+        </dt>
+    </section>
+
+    <footer>
+        And because it's a standardized, paper-based solution, Penlock works
+        with any wallet and remains secure forever—independently of any company,
+        service, or software. Oh, and it's quantum-proof :)
+    </footer>
 </section>
 
 <section>
