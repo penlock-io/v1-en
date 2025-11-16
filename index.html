@@ -293,6 +293,102 @@
     </section>
 </section>
 
+<section>
+    <h2>Questions & Answers</h2>
+    <section class="card note">
+        <details open>
+            <summary>Who is Penlock for?</summary>
+            <p>
+                Penlock is for anyone storing enough on-chain value to feel
+                unsafe with the limits of a simple seed phrase, but not
+                currently interested in switching to a more demanding 2-of-3
+                multisig setup.
+            </p>
+        </details>
+
+        <details open>
+            <summary>Do Penlock requires technical knowledge?</summary>
+            <p>
+                Not really. You only need to follow the step-by-step guide.
+                Penlock includes safety measures that lets you detect and
+                correct any mistake that could happen during the process, so you
+                are guaranteed that the resulting backup is correct and sound.
+                Similar features secure seed phrase recovery as well.
+            </p>
+        </details>
+
+        <details open>
+            <summary>What makes Penlock secure?</summary>
+            <p>
+                Mathematics. Penlock uses a twist on the
+                <a
+                    href="https://en.wikipedia.org/wiki/One-time_pad"
+                    target="_blank"
+                    >one-time pad</a
+                >, probably the most secure and fundamental building block in
+                cryptography. There's no new, fancy cryptography or cutting-edge
+                on-chain shenanigans: Penlock is basic, straightforward and
+                robust.
+            </p>
+        </details>
+
+        <details open>
+            <summary>What if Penlock goes offline?</summary>
+            <p>
+                All you need to generate, split or recover a seed phrase are the
+                documents from this website. Feel free to save or print a
+                copy—it's all open-source! You can also fork, clone or download
+                Penlock's
+                <!-- Translators: Replace "-en" in the GitHub link with your language code (e.g., "-ko" for Korean) -->
+                <a href="https://github.com/penlock-io/v1-en/" target="_blank"
+                    >GitHub Repository</a
+                >. It is just like Bitcoin: as long as a copy exists, Penlock
+                keeps going.
+            </p>
+        </details>
+
+        <details open>
+            <summary>
+                How does Penlock compare to a 2-of-3 multisig setup?
+            </summary>
+            <p>
+                Multisig is generally more secure—using hardware wallets from
+                different manufacturers protects against firmware
+                vulnerabilities. However, multisig requires more technical
+                expertise, involves managing wallet metadata, and is
+                protocol-specific.
+            </p>
+        </details>
+
+        <details open>
+            <summary>How does Penlock compare to SeedXor/SLIP39/etc.?</summary>
+            <p>
+                These solutions offer similar 2-of-2 or 2-of-3 backup schemes,
+                and can thus be used to implement the same
+                <a href="./split.html#strategy">backup strategy</a> as Penlock
+                to achieve Secure Access, Offsite Recovery, and Trust-Minimized
+                Inheritance. However, Penlock is currently the only
+                wallet-agnostic solution, since it doesn't require explicit
+                support.
+            </p>
+        </details>
+
+        <details open>
+            <summary>What Inspired Penlock?</summary>
+            <p>
+                Penlock was inspired by
+                <a href="https://secretcodex32.com/">Codex32</a>, by Andrew
+                Poelstra and Russell O'Connor, who pioneered the concept of
+                executing secret-splitting directly on paper. Penlock builds
+                upon that foundation by introducing the first paper-optimized
+                secret-splitting algorithm, on-paper error correction, and
+                various UX improvements to make the approach more widely
+                accessible.
+            </p>
+        </details>
+    </section>
+</section>
+
 <penlock-donate
     invite="Penlock is a peer-funded project!"
     message="You can help us grow and provide value to the community by making a donation. Thank you very much!"
