@@ -23,12 +23,12 @@
     }
 
     .sheet > h3 {
-        writing-mode: vertical-lr;
+        writing-mode: sideways-rl;
         text-align: center;
     }
 
     .sheet > h3:first-child {
-        transform: rotate(180deg);
+        writing-mode: sideways-lr;
     }
 </style>
 
@@ -54,8 +54,12 @@
 
     <section class="sheet row">
         <section class="row">
-            <share-back-section></share-back-section>
-            <share-back-section></share-back-section>
+            <share-back-section
+                fields="Date,Wallet,Owner,Recovery"
+            ></share-back-section>
+            <share-back-section
+                fields="Date,Wallet,Owner,Recovery"
+            ></share-back-section>
         </section>
 
         <h3>Worksheet 1/2 (back)</h3>
@@ -80,8 +84,12 @@
 
     <section class="sheet row">
         <section class="row">
-            <share-back-section></share-back-section>
-            <share-back-section></share-back-section>
+            <share-back-section
+                fields="Date,Wallet,Owner,Recovery"
+            ></share-back-section>
+            <share-back-section
+                fields="Date,Wallet,Owner,Recovery"
+            ></share-back-section>
         </section>
 
         <h3>Worksheet 2/2 (back)</h3>
@@ -111,9 +119,15 @@
 
     <section class="sheet row">
         <section class="row">
-            <share-back-section></share-back-section>
-            <share-back-section></share-back-section>
-            <share-back-section></share-back-section>
+            <share-back-section
+                fields="Date,Wallet,Owner,Recovery"
+            ></share-back-section>
+            <share-back-section
+                fields="Date,Wallet,Owner,Recovery"
+            ></share-back-section>
+            <share-back-section
+                fields="Date,Wallet,Owner,Recovery"
+            ></share-back-section>
         </section>
 
         <h3>Extra Shares (back)</h3>
